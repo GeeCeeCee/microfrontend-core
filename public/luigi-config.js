@@ -14,48 +14,82 @@ Luigi.setConfig({
             icon: "nutrition-activity",
             viewUrl: "/sample1",
           },
+          // {
+          //   pathSegment: "sample2",
+          //   label: "Second",
+          //   icon: "paper-plane",
+          //   viewUrl: "/sample2",
+          // },
           {
-            pathSegment: "sample2",
-            label: "Second",
+            pathSegment: "fine-tuning",
+            label: "Fine Tuning",
             icon: "paper-plane",
-            viewUrl: "/sample2",
-          },
-          {
-            pathSegment: "sample3",
-            label: "Next",
-            icon: "paper-plane",
-            viewUrl: "http://localhost:3000/about-me",
+            viewUrl: "http://localhost:3000/",
             loadingIndicator: {
               enabled: false,
             },
             context: {
-              user: "Gourab",
-              name: "Chattopadhyay",
+              env: "local",
+              postPrefix: "/consumption/rest/v1/configurationcomposer/",
+              localhost: "http://localhost:3005/api/version1",
+              backendAppRouter: "/backendfinetuningservice",
             },
           },
           {
-            pathSegment: "sample4",
-            label: "About me",
+            pathSegment: "process-monitor",
+            label: "Process Monitor",
             icon: "paper-plane",
-            viewUrl: "https://portfolio-woad-zeta.vercel.app/about-me",
+            viewUrl: "http://localhost:3000/",
             loadingIndicator: {
               enabled: false,
             },
-          },
-          {
-            category: { label: "Links", icon: "cloud" },
-            label: "Luigi Project",
-            externalLink: {
-              url: "https://luigi-project.io/",
+            context: {
+              env: "local",
+              postPrefix: "/consumption/rest/v1/configurationcomposer/",
+              localhost: "http://localhost:3004/api/version2",
+              backendAppRouter: "/backendfinetuningservice",
             },
           },
+
           {
-            category: "Links",
-            label: "Next.js",
-            externalLink: {
-              url: "https://nextjs.org/",
+            pathSegment: "entity",
+            label: "Entity",
+            icon: "paper-plane",
+            viewUrl:
+              "http://localhost:3000/entities?solutionComponentName=CloudforProjectCollaboration&solutionComponentNamespace=sap.cbc.samples.c4p.pm&solutionComponentVersion=1.0.0",
+            loadingIndicator: {
+              enabled: false,
+            },
+            context: {
+              env: "local",
+              postPrefix: "/consumption/rest/v1/configurationcomposer/",
+              localhost: "http://localhost:3005/api/version1",
+              backendAppRouter: "/backendfinetuningservice",
             },
           },
+          // {
+          //   pathSegment: "sample4",
+          //   label: "About me",
+          //   icon: "paper-plane",
+          //   viewUrl: "https://portfolio-woad-zeta.vercel.app/about-me",
+          //   loadingIndicator: {
+          //     enabled: false,
+          //   },
+          // },
+          // {
+          //   category: { label: "Links", icon: "cloud" },
+          //   label: "Luigi Project",
+          //   externalLink: {
+          //     url: "https://luigi-project.io/",
+          //   },
+          // },
+          // {
+          //   category: "Links",
+          //   label: "Next.js",
+          //   externalLink: {
+          //     url: "https://nextjs.org/",
+          //   },
+          // },
         ],
       },
     ],
